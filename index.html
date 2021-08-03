@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano-Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="header-title">Virtual Piano</h1>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn btn-notes btn-active" onclick="activeNote()">Notes</button>
+        <button class="btn btn-letters" onclick="activeLetter()">Letters</button>
+      </div>
+
+    <div class="piano">
+        <div id="key" data-key="65" class="piano-key note" data-note="c" data-letter="A"></div>
+        <div id="key" data-key="83" class="piano-key note" data-note="d" data-letter="S"></div>
+        <div id="key" data-key="68" class="piano-key note" data-note="e" data-letter="D"></div>
+        <div id="key" data-key="70" class="piano-key note" data-note="f" data-letter="F"></div>
+        <div id="key" data-key="71" class="piano-key note" data-note="g" data-letter="G"></div>
+        <div id="key" data-key="72" class="piano-key note" data-note="a" data-letter="H"></div>
+        <div id="key" data-key="74" class="piano-key note" data-note="b" data-letter="J"></div>
+        <div class="piano-sharp">
+            <div id="key" data-key="87" class="piano-key sharp note" data-note="c#" data-letter="W"></div>
+            <div id="key" data-key="69" class="piano-key sharp note" data-note="d#" data-letter="E"></div>
+            <div class="piano-key sharp none"></div>
+            <div id="key" data-key="84" class="piano-key sharp note" data-note="f#" data-letter="T"></div>
+            <div id="key" data-key="89" class="piano-key sharp note" data-note="g#" data-letter="Y"></div>
+            <div id="key" data-key="85" class="piano-key sharp note" data-note="a#" data-letter="U"></div>
+        </div>
+    </div>
+
+    <audio data-key="65" id="c" src="./audio/virtual-piano_assets_audio_c.mp3"></audio>
+    <audio data-key="87" id="c#" src="./audio/virtual-piano_assets_audio_c♯.mp3"></audio>
+    <audio data-key="83" id="d" src="./audio/virtual-piano_assets_audio_d.mp3"></audio>
+    <audio data-key="69" id="d#" src="./audio/virtual-piano_assets_audio_d♯.mp3"></audio>
+    <audio data-key="68" id="e" src="./audio/virtual-piano_assets_audio_e.mp3"></audio>
+    <audio data-key="70" id="f" src="./audio/virtual-piano_assets_audio_f.mp3"></audio>
+    <audio data-key="84" id="f#" src="./audio/virtual-piano_assets_audio_f♯.mp3"></audio>
+    <audio data-key="71" id="g" src="./audio/virtual-piano_assets_audio_g.mp3"></audio>
+    <audio data-key="89" id="g#" src="./audio/virtual-piano_assets_audio_g♯.mp3"></audio>
+    <audio data-key="72" id="a" src="./audio/virtual-piano_assets_audio_a.mp3"></audio>
+    <audio data-key="85" id="a#" src="./audio/virtual-piano_assets_audio_a♯.mp3"></audio>
+    <audio data-key="74" id="b" src="./audio/virtual-piano_assets_audio_b.mp3"></audio>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a:focus{
+    outline: none;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #313940;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    background: #313940;
+    overflow-x: hidden;
+}
+
+
+.header{
+    text-align: center;
+    border-bottom: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #38495a, #a2abb3, #38495a);
+}
+
+.header-title{
+    line-height: 60px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 306px;
+    height: 40px;
+    margin: 100px auto;
+    margin-bottom: 80px;
+}
+
+.btn-active {
+    background-color: #00b4a4 !important;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #454c53;
+    border: 0;
+    border-radius: 2px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    outline: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-active:hover {
+    background-color: #00c9b7 !important;
+}
+
+.btn:not(.btn-active):hover {
+    background-color: #515961;
+}
+
+.piano{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 560px;
+}
+
+.piano-key{
+    position: relative;
+    width: 80px;
+    height: 290px;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin: 4px;
+    border-radius: 0px 0px 12px 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.piano-key:hover {
+    background-color: #fff;
+  }
+
+.piano-sharp{
+    position: absolute;
+    display: flex;
+    left: 53px;
+    right: 53px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.piano-key.sharp {
+    width: 54px;
+    height: 170px;
+    background-color: #313940;
+    border: 0;
+    border-radius: 0px 0px 9px 9px;
+    top: 0;
+    z-index: 3;
+    pointer-events: auto;
+    transform-origin: center top;
+    margin: 0px;
+  }
+
+.piano-key.sharp.none {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    pointer-events: none;
+}
+
+.piano-key.note::before,
+.piano-key.letter::after{
+    content: attr(data-note);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+    line-height: 40px;
+    text-align: center;
+    color: #a2abb3;
+    bottom: -45px;
+    left: 20px;
+    transition: 0.3s;
+    
+}
+
+.piano-key.letter::after{
+    content: attr(data-letter);
+}
+
+.piano-key.sharp.note::before,
+.piano-key.sharp.letter::after{
+    bottom: 175px;
+    left: 7px;
+}
+    
+.piano-key.note:hover::before,
+.piano-key.letter:hover::after{
+  color: #fff;
+}
+
+.playing {
+  transform: scale(0.96);
+}
+
+.playing.note::before,
+.playing.letter::after{
+  color: #00b4a4;
+}
+
